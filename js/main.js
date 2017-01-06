@@ -24,15 +24,14 @@ function Cart() {
     this.appendItemHtml = function(product) {
         var newItem = $('<li></li>')
             .html(product.getDescription())
-            .attr('id-cart', product.getId())
-            .dblclick(removeItem);
+            .attr('id-cart', product.getId());
         $("#cart").append(newItem);
     };
 
     this.removeItemHtml = function(product) {
         var productId =  product.getId();
         if (items.productId) {
-            
+
         }
     };
 }
