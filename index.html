@@ -35,5 +35,37 @@
     </div>
 
   </body>
-  <script src="js/main.js"></script>
+  <!--<script src="js/main.js"></script>-->
+  <script src="js/Product.js"></script>
+  <script src="js/ProductsList.js"></script>
+
+  <script type="text/javascript">
+    var products = [
+      {
+        id: 1,
+        description: "Star Wars Lego Ship"
+      },
+      {
+        id: 2,
+        description: "Barbie Doll"
+      },
+      {
+        id: 3,
+        description: "Remote Control Airplane"
+      }
+    ];
+    productsList = new ProductsList({
+      products: products,
+      el : $("#products"),
+      dobleClickHandler : function(id, description){
+        carProducts.addProduct({
+          id: id,
+          description: description
+        });
+      }
+    });
+    carProducts = new ProductsList({
+      el : $("#cart")
+    });
+  </script>
 </html>
